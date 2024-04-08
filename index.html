@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <i class='bx bx-x' id="close"></i>
+        <div class="mp3Player">
+            <div class="visor" id="visor">
+                <div class="container-menu">
+                    <div class="menu-item" id="homeBtn">
+                        <i class='bx bxs-home menu-icon'></i>
+                    </div>
+                    <div class="menu-item" id="albumBtn">
+                        <i class='bx bxs-album menu-icon' ></i>
+                    </div>
+                    <div class="menu-item" id="uploadBtn">
+                        <i class='bx bxs-archive-in menu-icon'></i>
+                    </div>
+                </div>
+                <div class="main" id="main">
+                    <i class='bx bxs-share backMenu' id="backMenu"></i>
+
+                    <div class="home" id="homePlayer">
+                        <img src="F7cqKpBX0AI7ODR.jpeg" alt="" id="bg-song" class="bg-song">
+                        <div class="songDetail">
+                            <h1 id="artist-song">Artist Song</h1>
+                            <h2 id="artist-name">Artist Name</h2>
+                        </div>
+                        <div class="playerProgress" id="playerProgress">
+                            <div class="progress" id="progress"></div>
+                            <div class="musicDuration" >
+                                <span class="currentTime" id="currentTime">00:00</span>
+                                <span class="duration" id="duration">00:00</span>
+                            </div>
+                        </div>
+                        <div class="volume">
+                            <i class='bx bxs-volume-full' ></i>
+                            <input class="active" type="range" name="volume" id="volume" value="1" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+    
+                    <div class="album" id="albumPlayer">
+                        <ul class="albumList" id="albumList">
+                            <!-- <li class="albumItem">
+                                <i class="bx bxs-music"></i>
+                                <div class="infoItem">
+                                    <p>Song name</p>
+                                    <p>Artist Name</p>
+                                </div>
+                            </li>
+                         -->
+                        </ul>
+                    </div>
+
+                    <div class="uploadSong" id="uploadSong">
+                        <div class="boxUser">
+                            <input type="text" class="nameSong" name="name" id="nameSong" required/>
+                            <label for="" >Name Song</label>
+                        </div>
+                        <div class="boxUser">
+                            <input type="text" class="nameArtist" name="artist" id="artist" required />
+                            <label for="" >Artist</label>
+                        </div>
+                        <div class="boxUser">
+                            <input type="file" name="file" id="file"  accept=".mp3,.wav"/>
+                        </div>
+                        <a id="submit">Submit</a>
+                        <div id="div1"></div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="controlsPlayer">
+                <div class="primaryControl">
+                    <i class='bx bx-skip-previous'  id="previous"></i>
+                    <i class='bx bx-play' id="play"></i>
+                    <i class='bx bx-skip-next' id="next"></i>
+                </div>
+                <div class="secondaryControl">
+                    <i class='bx bx-repeat'></i>
+                    <i class='bx bx-shuffle'></i>
+                </div>
+            </div>
+
+            
+        </div>
+
+        
+    </div>
+
+    <script src="renderer.js" defer></script>
+    <script src="music.js" defer></script>
+</body>
+</html>
